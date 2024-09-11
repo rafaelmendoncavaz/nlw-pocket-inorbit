@@ -6,3 +6,12 @@ export interface CreateGoalRequest {
 export interface CreateGoalCompletion {
   goalId: string
 }
+
+export type GoalsPerDay = Record<
+  string,
+  {
+    id: string
+    title: string
+    completedAt: string
+  }[]
+>
