@@ -8,7 +8,7 @@ export async function getWeekSummary() {
   const firstDayOfWeek = dayjs().startOf("week").toDate()
   const lastDayOfWeek = dayjs().endOf("week").toDate()
 
-  const upToWeekCreatedGoals = db.$with("goals_created_up_to_week").as(
+  const upToWeekCreatedGoals = db.$with("up_to_week_created_goals").as(
     db
       .select({
         id: goals.id,
@@ -26,7 +26,7 @@ export async function getWeekSummary() {
         id: goalCompletions.id,
         title: goals.title,
         completedAt: goalCompletions.createdAt,
-        completedDate: sql /*sql*/`
+        completedDate: sql`
           DATE(${goalCompletions.createdAt})
         `.as("completedDate"),
       })
@@ -41,11 +41,11 @@ export async function getWeekSummary() {
       .orderBy(desc(goalCompletions.createdAt))
   )
 
-  const goalsCompletedAtWeekDay = db.$with("goals_completed_by_week_day").as(
+  const goalsCompletedAtWeekDay = db.$with("goals_completed_at_week_day").as(
     db
       .select({
         completedDate: goalsCompletedInWeek.completedDate,
-        completions: sql /*sql*/`
+        completions: sql`
           JSON_AGG(
             JSON_BUILD_OBJECT(
               'id', ${goalsCompletedInWeek.id},
