@@ -1,0 +1,207 @@
+_type: export
+__export_format: 4
+__export_date: 2024-09-12T14:13:44.129Z
+__export_source: insomnia.desktop.app:v10.0.0
+resources:
+  - _id: req_9dd4abc3672447eaa10fbfb93f549e70
+    parentId: wrk_cae1008e63074e48980521e662e591f1
+    modified: 1726143206709
+    created: 1726142925877
+    url: "{{ _.base_url }}/delete-completion"
+    name: Goal Completion
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"goalId": "w0hpekqsuhegky48osjw738w"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.0.0
+    authentication: {}
+    metaSortKey: -1726142925877
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_cae1008e63074e48980521e662e591f1
+    parentId: null
+    modified: 1725975752342
+    created: 1725975752342
+    name: API
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_1af2536fd5004aa087f365d38302129c
+    parentId: wrk_cae1008e63074e48980521e662e591f1
+    modified: 1726149397512
+    created: 1726148844566
+    url: "{{ _.base_url }}/delete-goal"
+    name: Goal
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": "y3477zbw7zfxnyrhou3gxcbe"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.0.0
+    authentication: {}
+    metaSortKey: -1726061150437
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4ae7c8546bfe4855908e8cf499d2a6cb
+    parentId: wrk_cae1008e63074e48980521e662e591f1
+    modified: 1725979400470
+    created: 1725979374997
+    url: "{{ _.base_url }}/pending-goals"
+    name: Pending Goals
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1725979374997
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d237f0f97af74521b6109c88af48a0bb
+    parentId: wrk_cae1008e63074e48980521e662e591f1
+    modified: 1726063665691
+    created: 1726063659574
+    url: "{{ _.base_url }}/summary"
+    name: Summary
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1725977580843
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_55147253ed79435aa9fc293d4be0b893
+    parentId: wrk_cae1008e63074e48980521e662e591f1
+    modified: 1725981327596
+    created: 1725975786689
+    url: "{{ _.base_url }}/goals"
+    name: Goal
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Estudar Programação",
+        	"desiredWeeklyFrequency": 5
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1725975786689
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_01f85ee7999445bb8681add880516c52
+    parentId: wrk_cae1008e63074e48980521e662e591f1
+    modified: 1726150097924
+    created: 1725981309746
+    url: "{{ _.base_url }}/completions"
+    name: Goal Completion
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"goalId": "q8h6w7ox95mswx19kl5f4vdc"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.3.3
+    authentication: {}
+    metaSortKey: -1724819615791
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_8d7fd65be08e03c2adc38a439144d726fcbf017f
+    parentId: wrk_cae1008e63074e48980521e662e591f1
+    modified: 1725975902977
+    created: 1725975752345
+    name: Base Environment
+    data:
+      base_url: localhost:3000
+    dataPropertyOrder:
+      "&":
+        - base_url
+    color: null
+    isPrivate: false
+    metaSortKey: 1725975752345
+    _type: environment
+  - _id: jar_8d7fd65be08e03c2adc38a439144d726fcbf017f
+    parentId: wrk_cae1008e63074e48980521e662e591f1
+    modified: 1725975752347
+    created: 1725975752347
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar

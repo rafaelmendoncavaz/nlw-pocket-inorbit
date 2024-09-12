@@ -12,3 +12,7 @@ export const createGoalCompletionSchema = z.object({
 export const deleteCompletionSchema = z.object({
   goalId: z.string(),
 })
+
+export const deleteGoalSchema = z.object({
+  id: z.string(),
+})
