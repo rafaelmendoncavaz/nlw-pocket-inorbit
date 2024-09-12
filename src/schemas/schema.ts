@@ -8,3 +8,7 @@ export const createGoalSchema = z.object({
 export const createGoalCompletionSchema = z.object({
   goalId: z.string(),
 })
+
+export const deleteCompletionSchema = z.object({
+  goalId: z.string(),
+})
